@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body class="bg-slate-100">
+  <div class="flex min-h-screen">
+    <aside class="w-64 bg-slate-900 p-6 text-white" data-sidebar>
+      <h2 class="text-lg font-bold">Admin Panel</h2>
+      <nav class="mt-8 space-y-3 text-sm">
+        <a href="/admin/dashboard.html" class="block rounded-lg bg-white/10 px-3 py-2">Dashboard</a>
+        <a href="/admin/orders.html" class="block rounded-lg px-3 py-2 text-slate-200">Orders</a>
+        <a href="/admin/clients.html" class="block rounded-lg px-3 py-2 text-slate-200">Clients</a>
+        <a href="/admin/blog.html" class="block rounded-lg px-3 py-2 text-slate-200">Blog</a>
+        <a href="/admin/settings.html" class="block rounded-lg px-3 py-2 text-slate-200">Settings</a>
+      </nav>
+    </aside>
+    <main class="flex-1 p-8">
+      <h1 class="text-2xl font-bold text-secondary">Admin Overview</h1>
+      <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div class="rounded-2xl bg-white p-6 shadow">
+          <p class="text-sm text-slate-500">Today Revenue</p>
+          <p class="mt-2 text-2xl font-bold">₹3,200</p>
+        </div>
+        <div class="rounded-2xl bg-white p-6 shadow">
+          <p class="text-sm text-slate-500">Total Orders</p>
+          <p class="mt-2 text-2xl font-bold" data-count="125">0</p>
+        </div>
+        <div class="rounded-2xl bg-white p-6 shadow">
+          <p class="text-sm text-slate-500">Pending Orders</p>
+          <p class="mt-2 text-2xl font-bold">8</p>
+        </div>
+        <div class="rounded-2xl bg-white p-6 shadow">
+          <p class="text-sm text-slate-500">Active Clients</p>
+          <p class="mt-2 text-2xl font-bold">42</p>
+        </div>
+      </div>
+
+      <div class="mt-8 rounded-2xl bg-white p-6 shadow">
+        <h2 class="text-lg font-semibold">Recent Orders</h2>
+        <table class="mt-4 w-full text-sm">
+          <thead class="text-left text-slate-500">
+            <tr>
+              <th class="py-2">Order ID</th>
+              <th>Client</th>
+              <th>Status</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t">
+              <td class="py-3">ORD-2026-001</td>
+              <td>Priya Verma</td>
+              <td><span class="rounded-full bg-orange-100 px-3 py-1 text-xs text-orange-600">Pending</span></td>
+              <td>₹500</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
