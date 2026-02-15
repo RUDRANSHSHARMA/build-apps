@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body class="bg-slate-50">
+  <div class="grid min-h-screen md:grid-cols-2">
+    <div class="gradient-hero hidden items-center justify-center text-white md:flex">
+      <div class="max-w-md space-y-4 p-10">
+        <h1 class="text-3xl font-bold">Create your account</h1>
+        <p class="text-slate-200">Start managing your orders and projects with ease.</p>
+      </div>
+    </div>
+    <div class="flex items-center justify-center p-8">
+      <form class="w-full max-w-md rounded-3xl bg-white p-8 shadow-xl" id="signup-form">
+        <h2 class="text-2xl font-bold text-secondary">Sign up</h2>
+        <div class="mt-6 space-y-4">
+          <input type="text" name="name" required placeholder="Full name" class="w-full rounded-lg border px-4 py-3" />
+          <input type="email" name="email" required placeholder="Email" class="w-full rounded-lg border px-4 py-3" />
+          <input type="tel" name="phone" required placeholder="Phone" class="w-full rounded-lg border px-4 py-3" />
+          <input type="password" name="password" required placeholder="Password" class="w-full rounded-lg border px-4 py-3" />
+          <input type="password" name="confirmPassword" required placeholder="Confirm password" class="w-full rounded-lg border px-4 py-3" />
+          <label class="flex items-center gap-2 text-sm text-slate-500">
+            <input type="checkbox" required /> I agree to Terms of Service
+          </label>
+          <button class="btn-primary w-full rounded-full px-6 py-3 text-sm font-semibold text-white" type="submit">Create account</button>
+          <button class="w-full rounded-full border border-slate-200 px-6 py-3 text-sm font-semibold">Sign up with Google</button>
+        </div>
+        <p class="mt-6 text-center text-sm text-slate-500">Already have an account? <a class="text-primary" href="/client/login.html">Login</a></p>
+      </form>
+    </div>
+  </div>
+  <script src="/assets/js/auth.js"></script>
+</body>
+</html>

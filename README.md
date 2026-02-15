@@ -1,56 +1,63 @@
-# Automation for Doki (Source code)
+# Rudransh Sharma Design & Content
 
-> [!IMPORTANT]
-> We have officially moved to 夢見 [Project], you can find us [here](https://github.com/YumemiProject) (for source code).
-> Thanks to Jerry, Draken and [Yaka Team](https://github.com/YakaTeam) for helping us release that app.
-> You can find and download 夢見 [Project] at [here](https://github.com/YakaTeam/). Shout out to Yaka Team!
+Full-stack website with public pages, client dashboard, admin dashboard, and REST API.
 
-### Please give the repo a :star:
+## Features
+- Public marketing site with services, portfolio, blog, and contact
+- Client dashboard (orders, new order, profile, payments, messages)
+- Admin dashboard (orders, clients, blog, settings)
+- REST API with JWT authentication
+- PostgreSQL database schema
+- File uploads (up to 10MB)
 
-### Usage
-**👉 Please follow [this document](https://github.com/DokiTeam/build-apps/tree/global/GUIDE.md) to know how this repository works.**
+## Tech Stack
+- Frontend: Static HTML + Tailwind CDN + Vanilla JS
+- Backend: Node.js + Express
+- Database: PostgreSQL
 
-### Contribute
-**👋 You can contribute by push your patches about [these workflows](https://github.com/DokiTeam/build-apps/tree/global/.github/workflows) (Actions) to this repository.**
+## Setup Instructions
 
------------------
+### 1) Install dependencies
+```bash
+cd /home/user/webapp
+npm install
+```
 
-### Doki (Source code)
+### 2) Configure environment
+```bash
+cp .env.example .env
+```
+Update the `.env` with PostgreSQL and SMTP credentials.
 
-https://github.com/DokiTeam/Doki
+### 3) Create database
+```bash
+createdb rudransh_website
+psql -d rudransh_website -f database/schema.sql
+```
 
-### Extensions (Source code)
+### 4) Run the server
+```bash
+npm run dev
+```
+Visit `http://localhost:5000`.
 
-https://github.com/DokiTeam/doki-exts
+## File Structure
+```
+public/            # HTML, CSS, JS
+server/            # Express API
+database/schema.sql
+```
 
-### Report app issues
+## API Summary
+- POST /api/register
+- POST /api/login
+- GET /api/services
+- GET /api/blog
+- GET /api/portfolio
+- POST /api/orders (auth)
+- GET /api/orders (auth)
+- /api/admin/* (admin)
 
-https://github.com/DokiTeam/Doki/issues/new/
-
-### Report build issues
-
-https://github.com/DokiTeam/build-apps/issues/new
-
-### Report extension issues
-
-https://github.com/DokiTeam/doki-exts/issues/new/
-
-****
-
-### License
-
-[![GNU GPLv3 Image](https://www.gnu.org/graphics/gplv3-127x51.png)](http://www.gnu.org/licenses/gpl-3.0.en.html)
-
-<div align="left">
-
-You may copy, distribute and modify the software as long as you track changes/dates in source files. Any modifications
-to or software including (via compiler) GPL-licensed code must also be made available under the GPL along with build &
-install instructions.
-
-</div>
-
-### Disclaimer
-
-**`¯\_(ツ)_/¯`**
-
-This source has been built by contributors / users, the content inside has been provided by **[Gemini](https://gemini.google.com/)**, but where is it, no one knows. No one knows how it works.
+## Notes
+- API requests require `Authorization: Bearer <token>` for protected routes.
+- Uploads are served from `/uploads`.

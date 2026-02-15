@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Management</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body class="bg-slate-100">
+  <div class="flex min-h-screen">
+    <aside class="w-64 bg-slate-900 p-6 text-white">
+      <h2 class="text-lg font-bold">Admin Panel</h2>
+      <nav class="mt-8 space-y-3 text-sm">
+        <a href="/admin/dashboard.html" class="block rounded-lg px-3 py-2 text-slate-200">Dashboard</a>
+        <a href="/admin/orders.html" class="block rounded-lg px-3 py-2 text-slate-200">Orders</a>
+        <a href="/admin/clients.html" class="block rounded-lg px-3 py-2 text-slate-200">Clients</a>
+        <a href="/admin/blog.html" class="block rounded-lg bg-white/10 px-3 py-2">Blog</a>
+        <a href="/admin/settings.html" class="block rounded-lg px-3 py-2 text-slate-200">Settings</a>
+      </nav>
+    </aside>
+    <main class="flex-1 p-8">
+      <div class="flex items-center justify-between">
+        <h1 class="text-2xl font-bold text-secondary">Blog Posts</h1>
+        <button class="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white">Add New Post</button>
+      </div>
+      <div class="mt-6 rounded-2xl bg-white p-6 shadow">
+        <table class="w-full text-sm">
+          <thead class="text-left text-slate-500">
+            <tr>
+              <th class="py-2">Title</th>
+              <th>Category</th>
+              <th>Status</th>
+              <th>Date</th>
+              <th>Views</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t">
+              <td class="py-3">How to Build a Brand</td>
+              <td>Design Tips</td>
+              <td><span class="rounded-full bg-green-100 px-3 py-1 text-xs text-green-700">Published</span></td>
+              <td>Feb 15, 2026</td>
+              <td>240</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
